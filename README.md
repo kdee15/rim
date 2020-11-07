@@ -1,2 +1,0 @@
-# rim
-robben island museum

@@ -1,0 +1,147 @@
+// 0.0 BASE [ 0.3. TYPOGRAPHY ]  ######################################################################################
+
+// A. FONT SOURCE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+$default: Roboto, Helvetica, 'Arial Black', sans-serif;
+
+// FONT WEIGHTS
+.fw-2 { font-weight: 200!important; }
+.fw-4 { font-weight: 400!important; }
+.fw-5 { font-weight: 500!important; }
+.fw-6 { font-weight: 600!important; }
+.fw-8 { font-weight: 800!important; }
+
+// LETTER SPACING
+.ls-1, .ls-1 * { letter-spacing: normal!important; }
+
+// A.2. RESPONSIVE FONTS ----------------------------------
+
+// font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
+// H1         max [ fnt: , lh:  ], min [ fnt: , lh:  ]
+// H2         max [ fnt: , lh:  ], min [ fnt: , lh:  ]
+// H3         max [ fnt: , lh:  ], min [ fnt: , lh:  ]
+// H4         max [ fnt: , lh:  ], min [ fnt: , lh:  ]
+// H5         max [ fnt: , lh:  ], min [ fnt: , lh:  ]
+
+
+// A.2.1. BREAKPOINTS -------------------------------------
+
+$view-min-xs:    320;
+$view-max-xs:    767;
+
+$view-min-sm:    768;
+$view-max-sm:    991;
+
+$view-min-md:    992;
+$view-max-md:    1440;
+
+// A.2.1. END ---------------------------------------------
+
+// A.2.2. QUICK RESPONSIVE FONT SETTINGS ------------------
+
+// H1 -----------------------
+$fnt-h1-min-xs: 28; // minimum font size at smallest screen size
+$fnt-h1-max-md: 37; // maximum font size at largest screen size
+$fnt-h1-max:    37; // failsafe for larger screens
+
+h1, .h1, .h1 * {
+  font-size: calc( #{$fnt-h1-min-xs}px + (#{$fnt-h1-max-md} - #{$fnt-h1-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  line-height: normal;
+}
+// H1 END -------------------
+
+// H2 -----------------------
+$fnt-h2-min-xs: 28; // minimum font size at smallest screen size
+$fnt-h2-max-md: 42; // maximum font size at largest screen size
+$fnt-h2-max:    42; // failsafe for larger screens
+
+h2, .h2, .h2 * {
+  font-size: calc( #{$fnt-h2-min-xs}px + (#{$fnt-h2-max-md} - #{$fnt-h2-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  line-height: normal;
+}
+// H2 END -------------------
+
+// H3 -----------------------
+$fnt-h3-min-xs: 18; // minimum font size at smallest screen size
+$fnt-h3-max-md: 32; // maximum font size at largest screen size
+$fnt-h3-max:    32; // failsafe for larger screens
+
+h3, .h3, .h3 * {
+  font-size: calc( #{$fnt-h3-min-xs}px + (#{$fnt-h3-max-md} - #{$fnt-h3-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  line-height: normal;
+}
+// H3 END -------------------
+
+// H4 -----------------------
+$fnt-h4-min-xs: 16; // minimum font size at smallest screen size
+$fnt-h4-max-md: 24; // maximum font size at largest screen size
+$fnt-h4-max:    24; // failsafe for larger screens
+
+h4, .h4, .h4 * {
+  font-size: calc( #{$fnt-h4-min-xs}px + (#{$fnt-h4-max-md} - #{$fnt-h4-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  line-height: normal;
+}
+// H4 END -------------------
+
+// p ------------------------
+$fnt-p-min-xs: 13; // minimum font size at smallest screen size
+$fnt-p-max-md: 16; // maximum font size at largest screen size
+$fnt-p-max:    16; // failsafe for larger screens
+
+$lh-p-min-xs: 20; // minimum line height at smallest screen size
+$lh-p-max-md: 26; // maximum line height at largest screen size
+$lh-p-max:    26; // failsafe for larger screens
+
+p, .fnt-md, .fnt-md *, a, li {
+  font-size: calc( #{$fnt-p-min-xs}px + (#{$fnt-p-max-md} - #{$fnt-p-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  line-height: calc( #{$lh-p-min-xs}px + (#{$lh-p-max-md} - #{$lh-p-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  letter-spacing: 1.25px;
+}
+// p END --------------------
+
+// fnt-13f ------------------
+$fnt-16-min-xs: 14; // minimum font size at smallest screen size
+$fnt-16-max-md: 16; // maximum font size at largest screen size
+$fnt-16-max:    16; // failsafe for larger screens
+
+$lh-16-min-xs: 14; // minimum line height at smallest screen size
+$lh-16-max-md: 16; // maximum line height at largest screen size
+$lh-16-max:    16; // failsafe for larger screens
+
+.fnt-16, .fnt-16 * {
+  font-size: calc( #{$fnt-16-min-xs}px + (#{$fnt-16-max-md} - #{$fnt-16-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  line-height: calc( #{$lh-16-min-xs}px + (#{$lh-16-max-md} - #{$lh-16-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  letter-spacing: 1.25px;
+}
+
+.fnt-16f, .fnt-16f * { font-size: 16px; line-height: normal; letter-spacing: 1.25px; }
+
+// fnt-13f END --------------
+
+// fnt-13f ------------------
+$fnt-13-min-xs: 10; // minimum font size at smallest screen size
+$fnt-13-max-md: 13; // maximum font size at largest screen size
+$fnt-13-max:    13; // failsafe for larger screens
+
+$lh-13-min-xs: 14; // minimum line height at smallest screen size
+$lh-13-max-md: 16; // maximum line height at largest screen size
+$lh-13-max:    16; // failsafe for larger screens
+
+.fnt-13, .fnt-13 * {
+  font-size: calc( #{$fnt-13-min-xs}px + (#{$fnt-13-max-md} - #{$fnt-13-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  line-height: calc( #{$lh-13-min-xs}px + (#{$lh-13-max-md} - #{$lh-13-min-xs}) * ((100vw - #{$view-min-xs}px) / (#{$view-max-md} - #{$view-min-xs})));
+  letter-spacing: 1.25px;
+}
+
+.fnt-13f, .fnt-13f * { font-size: 13px; line-height: normal; letter-spacing: 1.25px; }
+
+// fnt-13f END --------------
+
+// A.2.2. END ---------------------------------------------
+
+// A. END +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// END OF FILE ########################################################################################################
