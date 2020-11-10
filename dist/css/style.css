@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,500;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,500;1,400&family=Roboto+Slab&display=swap");
 .fw-2 {
   font-weight: 200 !important; }
 
@@ -57,6 +58,13 @@ p, .fnt-md, .fnt-md *, a, li {
   font-size: 13px;
   line-height: normal;
   letter-spacing: 1.25px; }
+
+html {
+  font-family: "Barlow", Helvetica, "Arial Black", sans-serif; }
+
+h1 {
+  font-family: "Roboto Slab", Helvetica, "Arial Black", sans-serif;
+  font-weight: 500; }
 
 .a-icon {
   width: 30px;
@@ -271,3 +279,88 @@ p, .fnt-md, .fnt-md *, a, li {
       background: #E2E2E2; }
   .o-table-layout.full-width {
     width: 100%; }
+
+.o-block-vr-tour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../images/background/nm-background.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0; }
+  .o-block-vr-tour:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1; }
+  .o-block-vr-tour * {
+    z-index: 1; }
+  .o-block-vr-tour h1 {
+    color: white; }
+
+.m-video {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 600px;
+  z-index: 10; }
+  .m-video:before {
+    content: "";
+    display: block;
+    padding-top: 180%; }
+  .m-video.on {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: none;
+    width: 100%; }
+  .m-video .a-video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0; }
+
+.m-screen-toggle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 100;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 100; }
+  .m-screen-toggle svg {
+    width: 100%;
+    height: 100%; }
+
+@media (min-width: 768px) {
+  .m-video {
+    position: relative;
+    width: 80%; }
+    .m-video:before {
+      content: "";
+      display: block;
+      padding-top: 140%; } }
+
+@media (min-width: 992px) {
+  .m-video {
+    position: relative;
+    width: 100%;
+    max-width: 800px; }
+    .m-video:before {
+      content: "";
+      display: block;
+      padding-top: 56%; } }

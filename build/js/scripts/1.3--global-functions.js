@@ -5,8 +5,6 @@
 // A.1. FUNCTIONS -----------------------------------------
 
 initToggleFunctions();
-initSwiperFunctions();
-initScrollFunctions();
 
 // A.1. END -----------------------------------------------
 
